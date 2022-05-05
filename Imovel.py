@@ -6,14 +6,16 @@ class Imovel:
         self.__endereco = endereco
         
 
+    # muda situação de imóveis cadastrados através da leitura de um arquivo txt
     def mudaSituacaoImovel(self, escolha):
         if escolha == 'ALUGADO':
             self.__situacao = 'ALUGADO'
             
         else:
             self.__situacao = 'DISPONIVEL'
-        
 
+
+    # muda situação do imóvel para imóveis cadastrados pela aplicação  
     def setSituacaoTrue(self):
         self.__situacao = 'ALUGADO'
 
