@@ -6,7 +6,7 @@ class Imovel:
         self.__endereco = endereco
         
 
-    def muda_situacao(self, escolha):
+    def mudaSituacaoImovel(self, escolha):
         if escolha == 'ALUGADO':
             self.__situacao = 'ALUGADO'
             
@@ -14,28 +14,28 @@ class Imovel:
             self.__situacao = 'DISPONIVEL'
         
 
-    def set_situacao_true(self):
+    def setSituacaoTrue(self):
         self.__situacao = 'ALUGADO'
 
 
-    def set_situacao_false(self):
+    def setSituacaoFalse(self):
         self.__situacao = 'DISPONIVEL'
  
 
 
-    def adiciona_endereco(self, endereco):
+    def adicionaEndereco(self, endereco):
         self.__endereco = endereco
 
 
-    def get_situacao(self):
+    def getSituacao(self):
         return self.__situacao
 
 
-    def set_tipo(self, tipo):
+    def setTipo(self, tipo):
         self.__tipo = tipo
         
-    def get_tipo(self):
+    def getTipo(self):
         return self.__tipo
 
-    def get_endereco(self):
+    def getEndereco(self):
         return self.__endereco

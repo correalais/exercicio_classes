@@ -6,41 +6,41 @@ class Imobiliaria:
 
     def __init__(self, nome):
         self.__nome = nome
-        self.__lst_imoveis_alugar = []
+        self.__lstImoveisAlugar = []
 
     
-    def set_nome(self, nome):
+    def setNomeImobiliaria(self, nome):
         self.__nome = nome
 
-    def get_nome(self):
+    def getNomeImobiliaria(self):
         return self.__nome
     
-    def adiciona_imovel(self, imovel):
-        self.__lst_imoveis_alugar.append(imovel)
+    def adicionaImovel(self, imovel):
+        self.__lstImoveisAlugar.append(imovel)
     
-    def retorna_imovel(self):
-        if len (self.__lst_imoveis_alugar) > 0:
+    def retornaImovel(self):
+        if len (self.__lstImoveisAlugar) > 0:
             print(f"{cor.azul}\nImóveis cadastrados até o momento: ")
-            for imovel in self.__lst_imoveis_alugar:
-                if imovel.get_tipo() == 'CASA':
+            for imovel in self.__lstImoveisAlugar:
+                if imovel.getTipo() == 'CASA':
                     print(f"{cor.azul}------------------------------------------------")
-                    print (f"{imovel.get_endereco(),  imovel.get_tipo(), imovel.get_situacao()}")
+                    print (f"{imovel.getEndereco(),  imovel.getTipo(), imovel.getSituacao()}")
                 else:
                     print(f"{cor.azul}------------------------------------------------")
-                    print (f"{imovel.get_endereco(),  imovel.get_tipo(), imovel.get_situacao()}")
+                    print (f"{imovel.getEndereco(),  imovel.getTipo(), imovel.getSituacao()}")
         
     
-    def valida_imovel(self, endereco):
-        for imovel in self.__lst_imoveis_alugar:
-            if imovel.get_endereco() == endereco:
+    def validaImovel(self, endereco):
+        for imovel in self.__lstImoveisAlugar:
+            if imovel.getEndereco() == endereco:
                 return True
         return False
 
-    def get_lista_imovel(self):
-        return self.__lst_imoveis_alugar
+    def getListaImovel(self):
+        return self.__lstImoveisAlugar
 
 
-    def valida_lista(self):
-        if len(self.__lst_imoveis_alugar) > 0:
+    def validaListaImovel(self):
+        if len(self.__lstImoveisAlugar) > 0:
             return True
         return False
