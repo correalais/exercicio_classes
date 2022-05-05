@@ -72,15 +72,15 @@ def cadastraImovel():
                 if imobiliaria.getNomeImobiliaria() == nomeImobiliaria:
                     if imobiliaria.retornaImovel() != False:
                         enderecoImovel = input(f"\n{cor.amarelo}Digite o endereco completo do imóvel (com endereco e número separados por vírgula sem espaços): ").upper()             
-                        if imobiliaria.valida_imovel(enderecoImovel) == False:
+                        if imobiliaria.validaImovel(enderecoImovel) == False:
                             imovel = Imovel(enderecoImovel)
                             tipoImovel = input(f"\n{cor.amarelo}Digite o tipo do imóvel (casa ou apartamento somente): ").upper()
                             if tipoImovel == 'CASA': 
-                                imovel.setTipo(tipoImovel)
+                                imovel.setTipoImovel(tipoImovel)
                                 imobiliaria.adicionaImovel(imovel)
                                 
                             elif tipoImovel == 'APARTAMENTO':
-                                imovel.setTipo(tipoImovel)
+                                imovel.setTipoImovel(tipoImovel)
                                 imobiliaria.adicionaImovel(imovel)
                                
                             else:
@@ -178,7 +178,7 @@ def inicializaArquivo():
                         if imobiliaria.validaImovel(enderecoImovel) == False:
                             imovel = Imovel(enderecoImovel)
                             imovel.mudaSituacao(lista[3])
-                            imovel.setTipo(lista[1])                                                    
+                            imovel.setTipoImovel(lista[1])                                                    
                             imobiliaria.adicionaImovel(imovel)   
     finally:
         arquivo.close
@@ -189,7 +189,7 @@ def finalizaArquivo():
     arquivo = open("imobiliarias.txt", "r+")     
     for imobiliaria in lstImobiliarias:            
         for imovel in imobiliaria.getListaImovel():    
-            arquivo.write(imobiliaria.getNomeImobiliaria()+ ";"+ imovel.getTipo()+";"+imovel.getEndereco()+";"+imovel.getSituacao()+"\n")
+            arquivo.write(imobiliaria.getNomeImobiliaria()+ ";"+ imovel.getTipoImovel()+";"+imovel.getEndereco()+";"+imovel.getSituacaoImovel()+"\n")
 
     arquivo.close
                           

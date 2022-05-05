@@ -29,14 +29,14 @@ class Imovel:
         self.__endereco = endereco
 
 
-    def getSituacao(self):
+    def getSituacaoImovel(self):
         return self.__situacao
 
 
-    def setTipo(self, tipo):
+    def setTipoImovel(self, tipo):
         self.__tipo = tipo
         
-    def getTipo(self):
+    def getTipoImovel(self):
         return self.__tipo
 
     def getEndereco(self):

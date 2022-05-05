@@ -22,12 +22,12 @@ class Imobiliaria:
         if len (self.__lstImoveisAlugar) > 0:
             print(f"{cor.azul}\nImóveis cadastrados até o momento: ")
             for imovel in self.__lstImoveisAlugar:
-                if imovel.getTipo() == 'CASA':
+                if imovel.getTipoImovel() == 'CASA':
                     print(f"{cor.azul}------------------------------------------------")
-                    print (f"{imovel.getEndereco(),  imovel.getTipo(), imovel.getSituacao()}")
+                    print (f"{imovel.getEndereco(),  imovel.getTipoImovel(), imovel.getSituacaoImovel()}")
                 else:
                     print(f"{cor.azul}------------------------------------------------")
-                    print (f"{imovel.getEndereco(),  imovel.getTipo(), imovel.getSituacao()}")
+                    print (f"{imovel.getEndereco(),  imovel.getTipoImovel(), imovel.getSituacaoImovel()}")
         
     
     def validaImovel(self, endereco):
